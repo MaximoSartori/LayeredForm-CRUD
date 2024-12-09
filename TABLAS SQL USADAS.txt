@@ -1,0 +1,19 @@
+TABLAS USADAS
+
+CREATE TABLE Bancos(
+	idBanco INT IDENTITY(1,1) PRIMARY KEY,
+	nombreBanco VARCHAR(40),
+	codMoneda INT,
+	FOREIGN KEY (codMoneda) REFERENCES Monedas(idMoneda),
+	tipoCuenta INT,
+	detalle VARCHAR(40),
+	CBU VARCHAR(22)
+);
+
+
+
+CREATE TABLE Monedas(
+	idMoneda INT IDENTITY(1,1) PRIMARY KEY,
+	descripcion VARCHAR(40),
+	codAFIP VARCHAR(3)
+);
